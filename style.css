@@ -1,0 +1,196 @@
+body {
+    font-family: sans-serif;
+    background-color: #535252;
+  }
+  
+  .container {
+    width: 320px;
+    height: 500px;
+    margin: 90px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .center img{
+        width: 25px;
+  }
+  
+  .alarmas {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .alarma {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #918e8e;
+    border-radius: 5px;
+  }
+  
+  .eliminar-icono {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    color: rgb(223, 220, 250);
+    font-size: 20px;
+  }
+  .mostrar-icono .eliminar-icono {
+    display: block;
+  }
+  .hora {
+    width: 60px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .tipo {
+    font-size: 13px;
+    margin-right: 10px;
+  }
+  .tipo-tiempo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tipo-tiempo span {
+    margin-right: 10px; 
+    
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  
+  .tiempo-restante {
+    font-size: 13px;
+    color: #999;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+  
+  .boton {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .boton.oculto {
+      display: none;
+    }
+
+  .boton button {
+    margin-top: 20vh;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+
+  /* Estilos generales */
+#seccion-crear-alarma {
+  text-align: center;
+  padding: 20px;
+}
+
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #888;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para el formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="time"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilos adicionales */
+#modal-alarma {
+  display: block;
+}
+
+
+  
+
+  
+
+  

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Alarma</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="center">
+          <img src="./components/alarm.svg" alt="alarm" />
+        </div>
+
+        <div class="alarmas" id="alarmas-container">
+          <!-- Aquí se insertarán las alarmas guardadas dinámicamente -->
+        </div>
+
+        <div class="boton">
+          <button id="crear-alarma">+</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="seccion-crear-alarma">
+      <div id="modal-alarma" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Alarma</h2>
+          <form id="formulario-alarma">
+            <div class="form-group">
+              <label for="hora">Hora:</label>
+              <input type="time" id="hora" name="hora" required />
+            </div>
+            <div class="form-group">
+              <label for="tipo">Tipo:</label>
+              <select id="tipo" name="tipo" required>
+                <option value="diario">Diario</option>
+                <option value="semana">Lunes a viernes</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="texto-voz">Texto para leer en voz alta:</label>
+              <input type="text" id="texto-voz" name="texto-voz" required />
+              <label for="hora">Hora para reproducir (formato HH:mm):</label>
+              <input
+                type="text"
+                id="hora"
+                name="hora"
+                placeholder="Ej. 18:05"
+                required
+              />
+              <button onclick="programarTextoAVoz()">
+                Programar Texto a Voz
+              </button>
+            </div>
+            <div class="form-group">
+              <button type="submit">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
